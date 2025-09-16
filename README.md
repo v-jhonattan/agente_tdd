@@ -5,17 +5,17 @@ Agente em Python que recebe um arquivo/trecho de código Python e gera automatic
 
 # 📁 Estrutura do Projeto
 
-agente_tdd/
-├── src/
-│   ├── __init__.py
-│   ├── exemplos.py          
-│   └── agente_tdd.py        # agente híbrido (mock/openai/azure)
-│
-├── .env.example             # variáveis de ambiente (copie para .env)
-├── pytest.ini               # limita coleta ao diretório src
-├── requirements.txt
-├── .gitignore
-└── README.md
+    agente_tdd/
+    ├── src/
+    │   ├── __init__.py
+    │   ├── exemplos.py          
+    │   └── agente_tdd.py        # agente híbrido (mock/openai/azure)
+    │
+    ├── .env.example             # variáveis de ambiente (copie para .env)
+    ├── pytest.ini               # limita coleta ao diretório src
+    ├── requirements.txt
+    ├── .gitignore
+    └── README.md
 
 
 # ✨ O que este agente faz
@@ -40,7 +40,7 @@ agente_tdd/
 ## 1) Ambiente
 
     python3 -m venv .venv
-    source .venv/bin/activate        # Windows (PowerShell): .venv\Scripts\Activate.ps1
+    source .venv/bin/activate       
     pip install --upgrade pip
     pip install -r requirements.txt
 
@@ -224,20 +224,6 @@ pytest rodando testes da .venv
     addopts = -q
     testpaths = src
     norecursedirs = .venv venv env node_modules build dist
-
-
-## .env não carregado
-
-- Confirme from dotenv import load_dotenv + load_dotenv() no início.
-
-- Para debug:
-
-    python - <<'PY'
-    import os
-    from dotenv import load_dotenv
-    load_dotenv(".env")
-    print("PROVIDER =", os.getenv("PROVIDER"))
-    PY
 
 
 ## openai.APIConnectionError / DNS
