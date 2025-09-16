@@ -177,10 +177,6 @@ Arquivo de teste gerado (`test_exemplos.py`):
 
 ## Rodando os testes
 
-Execução dos testes com pytest em modo conciso:
-
-![Pytest -q](imagens/testMock2.png)
-
 Execução detalhada com `pytest -vv`:
 
 ![Pytest detalhado](imagens/testMock2.png)
